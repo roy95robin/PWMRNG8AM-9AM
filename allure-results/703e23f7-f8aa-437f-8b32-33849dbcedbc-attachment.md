@@ -1,0 +1,935 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: example.spec.ts >> TC2 - Verify the search term appears on the results page
+- Location: tests\example.spec.ts:26:5
+
+# Error details
+
+```
+Error: expect(locator).toHaveValue(expected) failed
+
+Locator: locator('input[title="Search for Products, Brands and More"]')
+Expected: "perfume for men"
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toHaveValue" with timeout 5000ms
+  - waiting for locator('input[title="Search for Products, Brands and More"]')
+
+```
+
+```yaml
+- link "Flipkart":
+  - /url: /
+  - img "Flipkart"
+- link "Explore Plus":
+  - /url: /plus
+  - text: Explore Plus
+  - img
+- textbox "Search for products, brands and more": perfume for men
+- button:
+  - img
+- link "Login":
+  - /url: /account/login?ret=/search%3Fq%3Dperfume%2Bfor%2Bmen%26otracker%3Dsearch%26otracker1%3Dsearch%26marketplace%3DFLIPKART%26as-show%3Doff%26as%3Doff
+- link "Become a Seller":
+  - /url: https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect
+- text: More
+- img
+- link "Cart":
+  - /url: /viewcart?exploreMode=true&preference=FLIPKART
+  - img
+  - text: Cart
+- text: Electronics
+- img
+- text: TVs & Appliances
+- img
+- text: Men
+- img
+- text: Women
+- img
+- text: Baby & Kids
+- img
+- text: Home & Furniture
+- img
+- text: Sports, Books & More
+- img
+- link "Flights":
+  - /url: /travel/flights?otracker=nmenu_Flights
+- link "Offer Zone":
+  - /url: /offers-list/top-deals?screen=dynamic&pk=themeViews%3DDT-OMU-A2%3ADT-OMU~widgetType%3DdealCard~contentType%3Dneo&otracker=nmenu_offer-zone
+- text: Filters CATEGORIES
+- img
+- link "Beauty and Grooming":
+  - /url: /beauty-and-grooming/pr?sid=g9b&q=perfume+for+men&otracker=categorytree
+- img
+- link "Fragrances":
+  - /url: /beauty-and-grooming/fragrances/pr?sid=g9b,0yh&q=perfume+for+men&otracker=categorytree
+- img
+- link "Perfume":
+  - /url: /beauty-and-grooming/fragrances/perfume/pr?sid=g9b,0yh,jhz&q=perfume+for+men&otracker=categorytree
+- link "Eau De Cologne":
+  - /url: /beauty-and-grooming/fragrances/perfume/eau-de-cologne/pr?sid=g9b,0yh,jhz,x9r&q=perfume+for+men&otracker=categorytree
+- link "Eau De Parfum":
+  - /url: /beauty-and-grooming/fragrances/perfume/eau-de-parfum/pr?sid=g9b,0yh,jhz,xys&q=perfume+for+men&otracker=categorytree
+- link "Eau De Toilette":
+  - /url: /beauty-and-grooming/fragrances/perfume/eau-de-toilette/pr?sid=g9b,0yh,jhz,6ht&q=perfume+for+men&otracker=categorytree
+- text: Brand
+- img
+- text: Quantity
+- img
+- text: Fragrance Type
+- img
+- text: Price . . . . . . .
+- combobox:
+  - option "Min" [selected]
+  - option "₹200"
+  - option "₹300"
+  - option "₹400"
+  - option "₹500"
+  - option "₹600"
+- text: to
+- combobox:
+  - option "₹200"
+  - option "₹300"
+  - option "₹400"
+  - option "₹500"
+  - option "₹600"
+  - option "₹600+" [selected]
+- text: Customer Ratings
+- img
+- text: 4★ & above 3★ & above 2★ & above 1★ & above Perfume Type
+- img
+- text: Discount
+- img
+- img
+- text: "? Offers"
+- img
+- text: Buy More, Save More Special Price Gender
+- img
+- text: New Arrivals
+- img
+- text: Availability
+- img
+- text: GST Invoice Available
+- img
+- link "Home":
+  - /url: /
+- img
+- link "Beauty and Grooming":
+  - /url: /beauty-and-grooming/pr?sid=g9b&marketplace=FLIPKART
+- img
+- link "Fragrances":
+  - /url: /beauty-and-grooming/fragrances/pr?sid=g9b,0yh&marketplace=FLIPKART
+- img
+- link "Perfume":
+  - /url: /beauty-and-grooming/fragrances/perfume/pr?sid=g9b,0yh,jhz&marketplace=FLIPKART
+- text: Showing 1 – 40 of 16,132 results for "perfume for men" Sort By Relevance Popularity Price -- Low to High Price -- High to Low Newest First
+- link "BELLAVITA CEO MAN perfume & WHITE OUD perfume combo| Citrus & Woody Notes |Long Lasting| Eau de Parfum - 40 ml":
+  - /url: /bellavita-ceo-man-perfume-white-oud-combo-citrus-woody-notes-long-lasting-eau-de-parfum-40-ml/p/itm86b43f6b9aa98?pid=CBKGT64DQQYHSMV3&lid=LSTCBKGT64DQQYHSMV3RN9TVK&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.CBKGT64DQQYHSMV3.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA CEO MAN perfume & WHITE OUD perfume combo| Citrus & Woody Notes |Long Lasting| Eau de Parfum - 40 ml"
+  - img
+- img
+- link "BELLAVITA CEO MAN perfume & WHITE OUD perfume combo| Ci...":
+  - /url: /bellavita-ceo-man-perfume-white-oud-combo-citrus-woody-notes-long-lasting-eau-de-parfum-40-ml/p/itm86b43f6b9aa98?pid=CBKGT64DQQYHSMV3&lid=LSTCBKGT64DQQYHSMV3RN9TVK&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.CBKGT64DQQYHSMV3.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women, Imported 4.3
+- img
+- text: (5,00,823)
+- img
+- link "₹199 ₹748 73% off":
+  - /url: /bellavita-ceo-man-perfume-white-oud-combo-citrus-woody-notes-long-lasting-eau-de-parfum-40-ml/p/itm86b43f6b9aa98?pid=CBKGT64DQQYHSMV3&lid=LSTCBKGT64DQQYHSMV3RN9TVK&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.CBKGT64DQQYHSMV3.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "BELLAVITA Night Fever & Ceo Man Long Lasting Perfume Combo for Men and Women Eau de Parfum - 40 ml":
+  - /url: /bellavita-night-fever-ceo-man-long-lasting-perfume-combo-men-women-eau-de-parfum-40-ml/p/itm0f7ff55c52784?pid=PERHNQA2KKKZQGGB&lid=LSTPERHNQA2KKKZQGGBYR7DE6&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_2&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQofXO8J4xVFo8HxXADngbxllw93xMBiQo4NvynLmMEGDZpv4zii_5Cyu68-iK7NeOBIOnD1Ec2_6xMLJkCsEnq&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA Night Fever & Ceo Man Long Lasting Perfume Combo for Men and Women Eau de Parfum - 40 ml"
+  - img
+- img
+- link "BELLAVITA Night Fever & Ceo Man Long Lasting Perfume Co...":
+  - /url: /bellavita-night-fever-ceo-man-long-lasting-perfume-combo-men-women-eau-de-parfum-40-ml/p/itm0f7ff55c52784?pid=PERHNQA2KKKZQGGB&lid=LSTPERHNQA2KKKZQGGBYR7DE6&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_2&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQofXO8J4xVFo8HxXADngbxllw93xMBiQo4NvynLmMEGDZpv4zii_5Cyu68-iK7NeOBIOnD1Ec2_6xMLJkCsEnq&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.3
+- img
+- text: (70)
+- img
+- link "₹179 ₹698 74% off":
+  - /url: /bellavita-night-fever-ceo-man-long-lasting-perfume-combo-men-women-eau-de-parfum-40-ml/p/itm0f7ff55c52784?pid=PERHNQA2KKKZQGGB&lid=LSTPERHNQA2KKKZQGGBYR7DE6&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_2&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQofXO8J4xVFo8HxXADngbxllw93xMBiQo4NvynLmMEGDZpv4zii_5Cyu68-iK7NeOBIOnD1Ec2_6xMLJkCsEnq&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Lowest price since launch
+- link "THE MAN COMPANY Sky | Long Lasting Perfume for men Eau de Parfum - 50 ml":
+  - /url: /man-company-sky-long-lasting-perfume-men-eau-de-parfum-50-ml/p/itm586dacab04686?pid=PERGHE46CTYA2QGZ&lid=LSTPERGHE46CTYA2QGZAOF2NG&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGHE46CTYA2QGZ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "THE MAN COMPANY Sky | Long Lasting Perfume for men Eau de Parfum - 50 ml"
+  - img
+- link "THE MAN COMPANY Sky | Long Lasting Perfume for men Eau ...":
+  - /url: /man-company-sky-long-lasting-perfume-men-eau-de-parfum-50-ml/p/itm586dacab04686?pid=PERGHE46CTYA2QGZ&lid=LSTPERGHE46CTYA2QGZAOF2NG&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGHE46CTYA2QGZ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.1
+- img
+- text: (2,355)
+- img
+- link "₹251 ₹749 66% off":
+  - /url: /man-company-sky-long-lasting-perfume-men-eau-de-parfum-50-ml/p/itm586dacab04686?pid=PERGHE46CTYA2QGZ&lid=LSTPERGHE46CTYA2QGZAOF2NG&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGHE46CTYA2QGZ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Lowest price in the year
+- link "BELLAVITA CEO MAN perfume & WHITE OUD perfume combo| Citrus & Woody Notes |Long Lasting| Eau de Parfum - 40 ml":
+  - /url: /bellavita-ceo-man-perfume-white-oud-combo-citrus-woody-notes-long-lasting-eau-de-parfum-40-ml/p/itm86b43f6b9aa98?pid=CBKGT64DQQYHSMV3&lid=LSTCBKGT64DQQYHSMV3RN9TVK&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.CBKGT64DQQYHSMV3.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA CEO MAN perfume & WHITE OUD perfume combo| Citrus & Woody Notes |Long Lasting| Eau de Parfum - 40 ml"
+  - img
+- link "BELLAVITA CEO MAN perfume & WHITE OUD perfume combo| Ci...":
+  - /url: /bellavita-ceo-man-perfume-white-oud-combo-citrus-woody-notes-long-lasting-eau-de-parfum-40-ml/p/itm86b43f6b9aa98?pid=CBKGT64DQQYHSMV3&lid=LSTCBKGT64DQQYHSMV3RN9TVK&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.CBKGT64DQQYHSMV3.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women, Imported 4.3
+- img
+- text: (5,00,823)
+- img
+- link "₹199 ₹748 73% off":
+  - /url: /bellavita-ceo-man-perfume-white-oud-combo-citrus-woody-notes-long-lasting-eau-de-parfum-40-ml/p/itm86b43f6b9aa98?pid=CBKGT64DQQYHSMV3&lid=LSTCBKGT64DQQYHSMV3RN9TVK&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.CBKGT64DQQYHSMV3.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "Kenaz Fortuna Long Lasting Unisex Perfume | Floral Fruity | 20% Oil Dubai Parfum Eau de Parfum - 100 ml":
+  - /url: /kenaz-fortuna-long-lasting-unisex-perfume-floral-fruity-20-oil-dubai-parfum-eau-de-100-ml/p/itm8cfd2b4b02334?pid=PERHGFQ2ZJZB3EAK&lid=LSTPERHGFQ2ZJZB3EAKXC4HXN&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_5&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGFQ2ZJZB3EAK.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "Kenaz Fortuna Long Lasting Unisex Perfume | Floral Fruity | 20% Oil Dubai Parfum Eau de Parfum - 100 ml"
+  - img
+- link "Kenaz Fortuna Long Lasting Unisex Perfume | Floral Frui...":
+  - /url: /kenaz-fortuna-long-lasting-unisex-perfume-floral-fruity-20-oil-dubai-parfum-eau-de-100-ml/p/itm8cfd2b4b02334?pid=PERHGFQ2ZJZB3EAK&lid=LSTPERHGFQ2ZJZB3EAKXC4HXN&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_5&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGFQ2ZJZB3EAK.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.1
+- img
+- text: (3,831)
+- img
+- link "₹499":
+  - /url: /kenaz-fortuna-long-lasting-unisex-perfume-floral-fruity-20-oil-dubai-parfum-eau-de-100-ml/p/itm8cfd2b4b02334?pid=PERHGFQ2ZJZB3EAK&lid=LSTPERHGFQ2ZJZB3EAKXC4HXN&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_5&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGFQ2ZJZB3EAK.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "BELLAVITA BEAST Perfume & DEVIL FEVER Perfume combo|2X20ML|With Fruity & Woody Notes| Eau de Parfum - 40 ml":
+  - /url: /bellavita-beast-perfume-devil-fever-combo-2x20ml-with-fruity-woody-notes-eau-de-parfum-40-ml/p/itmcf09362aae2b9?pid=PERH93G7X9SCG7GP&lid=LSTPERH93G7X9SCG7GP9SLYX2&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_6&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQVRy5KsDMNz1Aff8rdDFrbBwdimyvA1Mu__-RP3Zhr_NrxaUC2l8vzU5ERSbVvtbB70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA BEAST Perfume & DEVIL FEVER Perfume combo|2X20ML|With Fruity & Woody Notes| Eau de Parfum - 40 ml"
+  - img
+- img
+- link "BELLAVITA BEAST Perfume & DEVIL FEVER Perfume combo|2X2...":
+  - /url: /bellavita-beast-perfume-devil-fever-combo-2x20ml-with-fruity-woody-notes-eau-de-parfum-40-ml/p/itmcf09362aae2b9?pid=PERH93G7X9SCG7GP&lid=LSTPERH93G7X9SCG7GP9SLYX2&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_6&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQVRy5KsDMNz1Aff8rdDFrbBwdimyvA1Mu__-RP3Zhr_NrxaUC2l8vzU5ERSbVvtbB70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.2
+- img
+- text: (13,973)
+- img
+- link "₹199 ₹798 75% off":
+  - /url: /bellavita-beast-perfume-devil-fever-combo-2x20ml-with-fruity-woody-notes-eau-de-parfum-40-ml/p/itmcf09362aae2b9?pid=PERH93G7X9SCG7GP&lid=LSTPERH93G7X9SCG7GP9SLYX2&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_6&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQVRy5KsDMNz1Aff8rdDFrbBwdimyvA1Mu__-RP3Zhr_NrxaUC2l8vzU5ERSbVvtbB70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "THE MAN COMPANY Black perfume Eau de Toilette - 50 ml":
+  - /url: /man-company-black-perfume-eau-de-toilette-50-ml/p/itm362a7d107d090?pid=PERFTY36CEY3UQY2&lid=LSTPERFTY36CEY3UQY2AKUEGT&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFTY36CEY3UQY2.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "THE MAN COMPANY Black perfume Eau de Toilette - 50 ml"
+  - img
+- link "THE MAN COMPANY Black perfume Eau de Toilette - 50 ml":
+  - /url: /man-company-black-perfume-eau-de-toilette-50-ml/p/itm362a7d107d090?pid=PERFTY36CEY3UQY2&lid=LSTPERFTY36CEY3UQY2AKUEGT&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFTY36CEY3UQY2.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 3.9
+- img
+- text: (1,16,011)
+- link "₹349 ₹1,299 73% off":
+  - /url: /man-company-black-perfume-eau-de-toilette-50-ml/p/itm362a7d107d090?pid=PERFTY36CEY3UQY2&lid=LSTPERFTY36CEY3UQY2AKUEGT&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFTY36CEY3UQY2.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "YUVVA ; LUXURY Yuva Shanaya & Royal King Unisex Perfume Combo Long Lasting Fragrance Eau de Parfum - 40 ml":
+  - /url: /yuvva-luxury-yuva-shanaya-royal-king-unisex-perfume-combo-long-lasting-fragrance-eau-de-parfum-40-ml/p/itma55a682397219?pid=PERHMH2GPNTTUXE7&lid=LSTPERHMH2GPNTTUXE731C2TF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_8&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHMH2GPNTTUXE7.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "YUVVA ; LUXURY Yuva Shanaya & Royal King Unisex Perfume Combo Long Lasting Fragrance Eau de Parfum - 40 ml"
+  - img
+- link "YUVVA ; LUXURY Yuva Shanaya & Royal King Unisex Perfume...":
+  - /url: /yuvva-luxury-yuva-shanaya-royal-king-unisex-perfume-combo-long-lasting-fragrance-eau-de-parfum-40-ml/p/itma55a682397219?pid=PERHMH2GPNTTUXE7&lid=LSTPERHMH2GPNTTUXE731C2TF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_8&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHMH2GPNTTUXE7.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.3
+- img
+- text: (3)
+- img
+- link "₹215 ₹399 46% off":
+  - /url: /yuvva-luxury-yuva-shanaya-royal-king-unisex-perfume-combo-long-lasting-fragrance-eau-de-parfum-40-ml/p/itma55a682397219?pid=PERHMH2GPNTTUXE7&lid=LSTPERHMH2GPNTTUXE731C2TF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_8&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHMH2GPNTTUXE7.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "BRIT ACCENT Combo Pack Of 2|Depth Of Ocean-BLANC OUD|Parfum|Long-Lasting|Specially Currated Eau de Toilette - 100 ml":
+  - /url: /brit-accent-combo-pack-2-depth-ocean-blanc-oud-parfum-long-lasting-specially-currated-eau-de-toilette-100-ml/p/itmff506fdf9f0a7?pid=PERHGVHJYHZPBXNU&lid=LSTPERHGVHJYHZPBXNUWDJBWQ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_9&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGVHJYHZPBXNU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BRIT ACCENT Combo Pack Of 2|Depth Of Ocean-BLANC OUD|Parfum|Long-Lasting|Specially Currated Eau de Toilette - 100 ml"
+  - img
+- link "BRIT ACCENT Combo Pack Of 2|Depth Of Ocean-BLANC OUD|Pa...":
+  - /url: /brit-accent-combo-pack-2-depth-ocean-blanc-oud-parfum-long-lasting-specially-currated-eau-de-toilette-100-ml/p/itmff506fdf9f0a7?pid=PERHGVHJYHZPBXNU&lid=LSTPERHGVHJYHZPBXNUWDJBWQ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_9&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGVHJYHZPBXNU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4
+- img
+- text: (4,933)
+- link "₹202 ₹798 74% off":
+  - /url: /brit-accent-combo-pack-2-depth-ocean-blanc-oud-parfum-long-lasting-specially-currated-eau-de-toilette-100-ml/p/itmff506fdf9f0a7?pid=PERHGVHJYHZPBXNU&lid=LSTPERHGVHJYHZPBXNUWDJBWQ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_9&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGVHJYHZPBXNU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "THE MAN COMPANY Blanc EDT (50ml) & Black EDT (50ml) Long Lasting Perfume Gift Set Eau de Toilette - 100 ml":
+  - /url: /man-company-blanc-edt-50ml-black-long-lasting-perfume-gift-set-eau-de-toilette-100-ml/p/itm4b2e5a1f1de82?pid=PERGEHRUHXRFPGCP&lid=LSTPERGEHRUHXRFPGCPLGNSDC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_10&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGEHRUHXRFPGCP.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "THE MAN COMPANY Blanc EDT (50ml) & Black EDT (50ml) Long Lasting Perfume Gift Set Eau de Toilette - 100 ml"
+  - img
+- link "THE MAN COMPANY Blanc EDT (50ml) & Black EDT (50ml) Lon...":
+  - /url: /man-company-blanc-edt-50ml-black-long-lasting-perfume-gift-set-eau-de-toilette-100-ml/p/itm4b2e5a1f1de82?pid=PERGEHRUHXRFPGCP&lid=LSTPERGEHRUHXRFPGCPLGNSDC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_10&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGEHRUHXRFPGCP.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4
+- img
+- text: (4,663)
+- link "₹368 ₹2,198 83% off":
+  - /url: /man-company-blanc-edt-50ml-black-long-lasting-perfume-gift-set-eau-de-toilette-100-ml/p/itm4b2e5a1f1de82?pid=PERGEHRUHXRFPGCP&lid=LSTPERGEHRUHXRFPGCPLGNSDC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_10&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGEHRUHXRFPGCP.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "BELLAVITA FRESH perfume & SKAI AQUATIC perfume combo|2X20ML|With Citrus & Woody Notes| Perfume - 40 ml":
+  - /url: /bellavita-fresh-perfume-skai-aquatic-combo-2x20ml-with-citrus-woody-notes-40-ml/p/itmcba69aa7b0211?pid=PERGZ5GD4MG57HMW&lid=LSTPERGZ5GD4MG57HMWSVCHFC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_11&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqToqgU_NJUV6HJ_1gL71l2qRBYzSGe-XMrxRGK5xIghIs_2WQ-f6cLChxrIBub7hfx70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA FRESH perfume & SKAI AQUATIC perfume combo|2X20ML|With Citrus & Woody Notes| Perfume - 40 ml"
+  - img
+- img
+- link "BELLAVITA FRESH perfume & SKAI AQUATIC perfume combo|2X...":
+  - /url: /bellavita-fresh-perfume-skai-aquatic-combo-2x20ml-with-citrus-woody-notes-40-ml/p/itmcba69aa7b0211?pid=PERGZ5GD4MG57HMW&lid=LSTPERGZ5GD4MG57HMWSVCHFC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_11&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqToqgU_NJUV6HJ_1gL71l2qRBYzSGe-XMrxRGK5xIghIs_2WQ-f6cLChxrIBub7hfx70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.4
+- img
+- text: (1,76,358)
+- img
+- link "₹199 ₹748 73% off":
+  - /url: /bellavita-fresh-perfume-skai-aquatic-combo-2x20ml-with-citrus-woody-notes-40-ml/p/itmcba69aa7b0211?pid=PERGZ5GD4MG57HMW&lid=LSTPERGZ5GD4MG57HMWSVCHFC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_11&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqToqgU_NJUV6HJ_1gL71l2qRBYzSGe-XMrxRGK5xIghIs_2WQ-f6cLChxrIBub7hfx70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "BLA BLI BLU Perfume Gift Set for Him|4x15ml|Aromatic & Woody Notes|Long Lasting Perfume - 60 ml":
+  - /url: /bla-bli-blu-perfume-gift-set-him-4x15ml-aromatic-woody-notes-long-lasting-60-ml/p/itmdd63b68912a44?pid=PERHHY4DYQ7KBJGD&lid=LSTPERHHY4DYQ7KBJGD4MZRMH&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_12&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqS6qb12_s1haqsGtbyrqL0EKD3xRld0zjC0YGN-NXtBqn46Wf7A4d0sNM6nhHUgsguMuah6RnHzucc8Eu5I0zug9QWMJPI4egdmz5nn89L_DQ%3D%3D&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BLA BLI BLU Perfume Gift Set for Him|4x15ml|Aromatic & Woody Notes|Long Lasting Perfume - 60 ml"
+  - img
+- img
+- link "BLA BLI BLU Perfume Gift Set for Him|4x15ml|Aromatic & ...":
+  - /url: /bla-bli-blu-perfume-gift-set-him-4x15ml-aromatic-woody-notes-long-lasting-60-ml/p/itmdd63b68912a44?pid=PERHHY4DYQ7KBJGD&lid=LSTPERHHY4DYQ7KBJGD4MZRMH&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_12&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqS6qb12_s1haqsGtbyrqL0EKD3xRld0zjC0YGN-NXtBqn46Wf7A4d0sNM6nhHUgsguMuah6RnHzucc8Eu5I0zug9QWMJPI4egdmz5nn89L_DQ%3D%3D&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.6
+- img
+- text: (120)
+- img
+- link "₹525 ₹650 19% off":
+  - /url: /bla-bli-blu-perfume-gift-set-him-4x15ml-aromatic-woody-notes-long-lasting-60-ml/p/itmdd63b68912a44?pid=PERHHY4DYQ7KBJGD&lid=LSTPERHHY4DYQ7KBJGD4MZRMH&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_12&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqS6qb12_s1haqsGtbyrqL0EKD3xRld0zjC0YGN-NXtBqn46Wf7A4d0sNM6nhHUgsguMuah6RnHzucc8Eu5I0zug9QWMJPI4egdmz5nn89L_DQ%3D%3D&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "PERFUMERS CLUB SUBMARINEGrenadeIndiasLoudestParfummadeusingAerofuseTechnologywith10% Propellant Extrait De Parfum - 50 ml":
+  - /url: /perfumers-club-submarinegrenadeindiasloudestparfummadeusingaerofusetechnologywith10-propellant-extrait-de-parfum-50-ml/p/itm98bd25df6966c?pid=PERHGVJKPS5SCUAB&lid=LSTPERHGVJKPS5SCUAB4XXERG&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_13&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGVJKPS5SCUAB.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "PERFUMERS CLUB SUBMARINEGrenadeIndiasLoudestParfummadeusingAerofuseTechnologywith10% Propellant Extrait De Parfum - 50 ml"
+  - img
+- link "PERFUMERS CLUB SUBMARINEGrenadeIndiasLoudestParfummadeu...":
+  - /url: /perfumers-club-submarinegrenadeindiasloudestparfummadeusingaerofusetechnologywith10-propellant-extrait-de-parfum-50-ml/p/itm98bd25df6966c?pid=PERHGVJKPS5SCUAB&lid=LSTPERHGVJKPS5SCUAB4XXERG&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_13&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGVJKPS5SCUAB.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.3
+- img
+- text: (371)
+- img
+- link "₹867 ₹1,190 27% off":
+  - /url: /perfumers-club-submarinegrenadeindiasloudestparfummadeusingaerofusetechnologywith10-propellant-extrait-de-parfum-50-ml/p/itm98bd25df6966c?pid=PERHGVJKPS5SCUAB&lid=LSTPERHGVJKPS5SCUAB4XXERG&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_13&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHGVJKPS5SCUAB.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "Embarouge 22 North Long Lasting Middle Eastern Luxury|Amberwood and Oud Notes Eau de Parfum - 100 ml":
+  - /url: /embarouge-22-north-long-lasting-middle-eastern-luxury-amberwood-oud-notes-eau-de-parfum-100-ml/p/itm572d59f7e07e0?pid=PERHG953JNTMYKD7&lid=LSTPERHG953JNTMYKD7J7FJXF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_14&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHG953JNTMYKD7.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "Embarouge 22 North Long Lasting Middle Eastern Luxury|Amberwood and Oud Notes Eau de Parfum - 100 ml"
+  - img
+- link "Embarouge 22 North Long Lasting Middle Eastern Luxury|A...":
+  - /url: /embarouge-22-north-long-lasting-middle-eastern-luxury-amberwood-oud-notes-eau-de-parfum-100-ml/p/itm572d59f7e07e0?pid=PERHG953JNTMYKD7&lid=LSTPERHG953JNTMYKD7J7FJXF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_14&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHG953JNTMYKD7.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.4
+- img
+- text: (80)
+- img
+- link "₹1,999 ₹2,099 4% off":
+  - /url: /embarouge-22-north-long-lasting-middle-eastern-luxury-amberwood-oud-notes-eau-de-parfum-100-ml/p/itm572d59f7e07e0?pid=PERHG953JNTMYKD7&lid=LSTPERHG953JNTMYKD7J7FJXF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_14&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHG953JNTMYKD7.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Lowest price since launch
+- link "PARK AVENUE Amazon Woods Eau de Parfum - 120 ml":
+  - /url: /park-avenue-amazon-woods-eau-de-parfum-120-ml/p/itmff1678f6d17e8?pid=PERFP65BYKYPNNSP&lid=LSTPERFP65BYKYPNNSPSPUUS8&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&spotlightTagId=default_BestsellerId_g9b%2F0yh%2Fjhz&srno=s_1_15&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFP65BYKYPNNSP.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "PARK AVENUE Amazon Woods Eau de Parfum - 120 ml"
+  - img
+- link "PARK AVENUE Amazon Woods Eau de Parfum - 120 ml":
+  - /url: /park-avenue-amazon-woods-eau-de-parfum-120-ml/p/itmff1678f6d17e8?pid=PERFP65BYKYPNNSP&lid=LSTPERFP65BYKYPNNSPSPUUS8&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&spotlightTagId=default_BestsellerId_g9b%2F0yh%2Fjhz&srno=s_1_15&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFP65BYKYPNNSP.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.2
+- img
+- text: (48,343)
+- img
+- link "₹232 ₹349 33% off":
+  - /url: /park-avenue-amazon-woods-eau-de-parfum-120-ml/p/itmff1678f6d17e8?pid=PERFP65BYKYPNNSP&lid=LSTPERFP65BYKYPNNSPSPUUS8&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&spotlightTagId=default_BestsellerId_g9b%2F0yh%2Fjhz&srno=s_1_15&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFP65BYKYPNNSP.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "BELLAVITA LUXURY Farahat Long Lasting Eau de Parfum For Men Eau de Parfum - 100 ml":
+  - /url: /bellavita-luxury-farahat-long-lasting-eau-de-parfum-men-100-ml/p/itmcf905387e6322?pid=PERHZ36PYGAHRBGV&lid=LSTPERHZ36PYGAHRBGVR1IDCP&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_16&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHZ36PYGAHRBGV.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA LUXURY Farahat Long Lasting Eau de Parfum For Men Eau de Parfum - 100 ml"
+  - img
+- link "BELLAVITA LUXURY Farahat Long Lasting Eau de Parfum For...":
+  - /url: /bellavita-luxury-farahat-long-lasting-eau-de-parfum-men-100-ml/p/itmcf905387e6322?pid=PERHZ36PYGAHRBGV&lid=LSTPERHZ36PYGAHRBGVR1IDCP&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_16&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHZ36PYGAHRBGV.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.3
+- img
+- text: (56)
+- img
+- link "₹809 ₹999 19% off":
+  - /url: /bellavita-luxury-farahat-long-lasting-eau-de-parfum-men-100-ml/p/itmcf905387e6322?pid=PERHZ36PYGAHRBGV&lid=LSTPERHZ36PYGAHRBGVR1IDCP&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_16&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHZ36PYGAHRBGV.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Lowest price since launch
+- link "BELLAVITA WHITE OUD perfume & HONEY OUD perfume combo|2X20ML|With Citrus & Woody Notes| Eau de Parfum - 40 ml":
+  - /url: /bellavita-white-oud-perfume-honey-combo-2x20ml-with-citrus-woody-notes-eau-de-parfum-40-ml/p/itmb74167372ebf7?pid=PERHYWWKY2FQSVER&lid=LSTPERHYWWKY2FQSVERH04BYS&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_17&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQvSSHLbB1Uc46gll3PchuWLf4xnwens1MRXRo0onFn079JA2Urk6v6QjEvDhFII7170rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA WHITE OUD perfume & HONEY OUD perfume combo|2X20ML|With Citrus & Woody Notes| Eau de Parfum - 40 ml"
+  - img
+- img
+- link "BELLAVITA WHITE OUD perfume & HONEY OUD perfume combo|2...":
+  - /url: /bellavita-white-oud-perfume-honey-combo-2x20ml-with-citrus-woody-notes-eau-de-parfum-40-ml/p/itmb74167372ebf7?pid=PERHYWWKY2FQSVER&lid=LSTPERHYWWKY2FQSVERH04BYS&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_17&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQvSSHLbB1Uc46gll3PchuWLf4xnwens1MRXRo0onFn079JA2Urk6v6QjEvDhFII7170rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.4
+- img
+- text: (1,27,520)
+- img
+- link "₹199 ₹890 77% off":
+  - /url: /bellavita-white-oud-perfume-honey-combo-2x20ml-with-citrus-woody-notes-eau-de-parfum-40-ml/p/itmb74167372ebf7?pid=PERHYWWKY2FQSVER&lid=LSTPERHYWWKY2FQSVERH04BYS&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_17&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQvSSHLbB1Uc46gll3PchuWLf4xnwens1MRXRo0onFn079JA2Urk6v6QjEvDhFII7170rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "THE MAN COMPANY Perfume Gift Set - Timeless Fragrances | Luxury Long-Lasting Perfumes For Men Perfume - 200 ml":
+  - /url: /man-company-perfume-gift-set-timeless-fragrances-luxury-long-lasting-perfumes-men-200-ml/p/itmfdbcd89a96cb5?pid=PERGVYSZHSZFCRGB&lid=LSTPERGVYSZHSZFCRGBP1VSPY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_18&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqScrLcWd1Rxhlg0PyF3wO0eNL_F4EifiMENf-xtNQJ_hFF6ka88AfmfVirTUWhn7QOPUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "THE MAN COMPANY Perfume Gift Set - Timeless Fragrances | Luxury Long-Lasting Perfumes For Men Perfume - 200 ml"
+  - img
+- img
+- link "THE MAN COMPANY Perfume Gift Set - Timeless Fragrances ...":
+  - /url: /man-company-perfume-gift-set-timeless-fragrances-luxury-long-lasting-perfumes-men-200-ml/p/itmfdbcd89a96cb5?pid=PERGVYSZHSZFCRGB&lid=LSTPERGVYSZHSZFCRGBP1VSPY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_18&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqScrLcWd1Rxhlg0PyF3wO0eNL_F4EifiMENf-xtNQJ_hFF6ka88AfmfVirTUWhn7QOPUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.2
+- img
+- text: (1,848)
+- img
+- link "₹569 ₹4,295 86% off":
+  - /url: /man-company-perfume-gift-set-timeless-fragrances-luxury-long-lasting-perfumes-men-200-ml/p/itmfdbcd89a96cb5?pid=PERGVYSZHSZFCRGB&lid=LSTPERGVYSZHSZFCRGBP1VSPY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_18&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqScrLcWd1Rxhlg0PyF3wO0eNL_F4EifiMENf-xtNQJ_hFF6ka88AfmfVirTUWhn7QOPUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Lowest price in the year
+- link "Bravo Vibe Vanilla & Apple Long Lasting Perfume Extrait De Parfum - 100 ml":
+  - /url: /bravo-vibe-vanilla-apple-long-lasting-perfume-extrait-de-parfum-100-ml/p/itm35f9caea90a22?pid=PERHP6B4NNFN9HSY&lid=LSTPERHP6B4NNFN9HSYJBQ1GI&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_19&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHP6B4NNFN9HSY.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "Bravo Vibe Vanilla & Apple Long Lasting Perfume Extrait De Parfum - 100 ml"
+  - img
+- link "Bravo Vibe Vanilla & Apple Long Lasting Perfume Extrait...":
+  - /url: /bravo-vibe-vanilla-apple-long-lasting-perfume-extrait-de-parfum-100-ml/p/itm35f9caea90a22?pid=PERHP6B4NNFN9HSY&lid=LSTPERHP6B4NNFN9HSYJBQ1GI&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_19&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHP6B4NNFN9HSY.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women
+- link "₹900 ₹1,499 39% off":
+  - /url: /bravo-vibe-vanilla-apple-long-lasting-perfume-extrait-de-parfum-100-ml/p/itm35f9caea90a22?pid=PERHP6B4NNFN9HSY&lid=LSTPERHP6B4NNFN9HSYJBQ1GI&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_19&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHP6B4NNFN9HSY.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "BEARDO Godfather & Whisky Smoke Perfume|Strong & Long Lasting Fragrance|Aromatic | Gift Eau de Parfum - 100 ml":
+  - /url: /beardo-godfather-whisky-smoke-perfume-strong-long-lasting-fragrance-aromatic-gift-eau-de-parfum-100-ml/p/itm1a6193f8aa0b6?pid=PERGGFUHJN2DW8GX&lid=LSTPERGGFUHJN2DW8GXZQCUY6&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_20&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGGFUHJN2DW8GX.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BEARDO Godfather & Whisky Smoke Perfume|Strong & Long Lasting Fragrance|Aromatic | Gift Eau de Parfum - 100 ml"
+  - img
+- link "BEARDO Godfather & Whisky Smoke Perfume|Strong & Long L...":
+  - /url: /beardo-godfather-whisky-smoke-perfume-strong-long-lasting-fragrance-aromatic-gift-eau-de-parfum-100-ml/p/itm1a6193f8aa0b6?pid=PERGGFUHJN2DW8GX&lid=LSTPERGGFUHJN2DW8GXZQCUY6&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_20&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGGFUHJN2DW8GX.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.3
+- img
+- text: (49,443)
+- img
+- link "₹761 ₹1,398 45% off":
+  - /url: /beardo-godfather-whisky-smoke-perfume-strong-long-lasting-fragrance-aromatic-gift-eau-de-parfum-100-ml/p/itm1a6193f8aa0b6?pid=PERGGFUHJN2DW8GX&lid=LSTPERGGFUHJN2DW8GXZQCUY6&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_20&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGGFUHJN2DW8GX.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "MOODY Set Of 4 For men|Long-lasting fragrances|Travel Friendly |Combo Pack Eau de Parfum - 80 ml":
+  - /url: /moody-set-4-men-long-lasting-fragrances-travel-friendly-combo-pack-eau-de-parfum-80-ml/p/itm1a0b91fc82a7e?pid=PERGYP3XRBMEUYUH&lid=LSTPERGYP3XRBMEUYUH7J2WOW&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_21&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQmnDsVXOZmsYELONIhKwjPYC783Ln8ZeZ8twg4w4EkkVjBO4r7mdaLDaxg9p-EjZmPUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "MOODY Set Of 4 For men|Long-lasting fragrances|Travel Friendly |Combo Pack Eau de Parfum - 80 ml"
+  - img
+- img
+- link "MOODY Set Of 4 For men|Long-lasting fragrances|Travel F...":
+  - /url: /moody-set-4-men-long-lasting-fragrances-travel-friendly-combo-pack-eau-de-parfum-80-ml/p/itm1a0b91fc82a7e?pid=PERGYP3XRBMEUYUH&lid=LSTPERGYP3XRBMEUYUH7J2WOW&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_21&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQmnDsVXOZmsYELONIhKwjPYC783Ln8ZeZ8twg4w4EkkVjBO4r7mdaLDaxg9p-EjZmPUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 3.9
+- img
+- text: (9,520)
+- img
+- link "₹248 ₹599 58% off":
+  - /url: /moody-set-4-men-long-lasting-fragrances-travel-friendly-combo-pack-eau-de-parfum-80-ml/p/itm1a0b91fc82a7e?pid=PERGYP3XRBMEUYUH&lid=LSTPERGYP3XRBMEUYUH7J2WOW&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_21&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqQmnDsVXOZmsYELONIhKwjPYC783Ln8ZeZ8twg4w4EkkVjBO4r7mdaLDaxg9p-EjZmPUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "BELLAVITA GHOST Perfume & NIGHT FEVER Perfume combo|2X20ML|With Citrus & Woody Notes| Eau de Parfum - 40 ml":
+  - /url: /bellavita-ghost-perfume-night-fever-combo-2x20ml-with-citrus-woody-notes-eau-de-parfum-40-ml/p/itmca4aaa216bb60?pid=PERH93EEZQSRUWGF&lid=LSTPERH93EEZQSRUWGFZ6AKRF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_22&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqThv6cbQshwjm9GYYjBMLC2Gt90T1YgESFLHRVM39KDRnQ3rLndJ0kGrgzdR-Km64570rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA GHOST Perfume & NIGHT FEVER Perfume combo|2X20ML|With Citrus & Woody Notes| Eau de Parfum - 40 ml"
+  - img
+- img
+- link "BELLAVITA GHOST Perfume & NIGHT FEVER Perfume combo|2X2...":
+  - /url: /bellavita-ghost-perfume-night-fever-combo-2x20ml-with-citrus-woody-notes-eau-de-parfum-40-ml/p/itmca4aaa216bb60?pid=PERH93EEZQSRUWGF&lid=LSTPERH93EEZQSRUWGFZ6AKRF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_22&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqThv6cbQshwjm9GYYjBMLC2Gt90T1YgESFLHRVM39KDRnQ3rLndJ0kGrgzdR-Km64570rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.1
+- img
+- text: (2,891)
+- img
+- link "₹199 ₹798 75% off":
+  - /url: /bellavita-ghost-perfume-night-fever-combo-2x20ml-with-citrus-woody-notes-eau-de-parfum-40-ml/p/itmca4aaa216bb60?pid=PERH93EEZQSRUWGF&lid=LSTPERH93EEZQSRUWGFZ6AKRF&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_22&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqThv6cbQshwjm9GYYjBMLC2Gt90T1YgESFLHRVM39KDRnQ3rLndJ0kGrgzdR-Km64570rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "SKINN by TITAN Mens Raw Eau de Parfum - 100 ml":
+  - /url: /skinn-titan-mens-raw-eau-de-parfum-100-ml/p/itmf3wgxzsgfh4ju?pid=PERER27NNDJYEXZQ&lid=LSTPERER27NNDJYEXZQRMLN9C&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_23&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERER27NNDJYEXZQ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "SKINN by TITAN Mens Raw Eau de Parfum - 100 ml"
+  - img
+- link "SKINN by TITAN Mens Raw Eau de Parfum - 100 ml":
+  - /url: /skinn-titan-mens-raw-eau-de-parfum-100-ml/p/itmf3wgxzsgfh4ju?pid=PERER27NNDJYEXZQ&lid=LSTPERER27NNDJYEXZQRMLN9C&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_23&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERER27NNDJYEXZQ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.4
+- img
+- text: (5,845)
+- img
+- link "₹2,795":
+  - /url: /skinn-titan-mens-raw-eau-de-parfum-100-ml/p/itmf3wgxzsgfh4ju?pid=PERER27NNDJYEXZQ&lid=LSTPERER27NNDJYEXZQRMLN9C&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_23&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERER27NNDJYEXZQ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "THE MAN COMPANY Fire, Night and Blanc Perfume Combo 3 x 50ml | Long-Lasting Fragrance Perfume - 150 ml":
+  - /url: /man-company-fire-night-blanc-perfume-combo-3-x-50ml-long-lasting-fragrance-150-ml/p/itmad7e4a9bc5175?pid=PERH3FH9BYVFHY4W&lid=LSTPERH3FH9BYVFHY4W6STG9J&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_24&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERH3FH9BYVFHY4W.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "THE MAN COMPANY Fire, Night and Blanc Perfume Combo 3 x 50ml | Long-Lasting Fragrance Perfume - 150 ml"
+  - img
+- link "THE MAN COMPANY Fire, Night and Blanc Perfume Combo 3 x...":
+  - /url: /man-company-fire-night-blanc-perfume-combo-3-x-50ml-long-lasting-fragrance-150-ml/p/itmad7e4a9bc5175?pid=PERH3FH9BYVFHY4W&lid=LSTPERH3FH9BYVFHY4W6STG9J&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_24&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERH3FH9BYVFHY4W.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.2
+- img
+- text: (2,812)
+- img
+- link "₹476 ₹2,397 80% off":
+  - /url: /man-company-fire-night-blanc-perfume-combo-3-x-50ml-long-lasting-fragrance-150-ml/p/itmad7e4a9bc5175?pid=PERH3FH9BYVFHY4W&lid=LSTPERH3FH9BYVFHY4W6STG9J&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_24&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERH3FH9BYVFHY4W.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "PARK AVENUE Euphoria Eau de Parfum Eau de Parfum - 100 ml":
+  - /url: /park-avenue-euphoria-eau-de-parfum-100-ml/p/itm8e246a197d073?pid=PERFYWNYRAZK2ZAG&lid=LSTPERFYWNYRAZK2ZAGHUBUSM&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_25&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFYWNYRAZK2ZAG.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "PARK AVENUE Euphoria Eau de Parfum Eau de Parfum - 100 ml"
+  - img
+- link "PARK AVENUE Euphoria Eau de Parfum Eau de Parfum - 10...":
+  - /url: /park-avenue-euphoria-eau-de-parfum-100-ml/p/itm8e246a197d073?pid=PERFYWNYRAZK2ZAG&lid=LSTPERFYWNYRAZK2ZAGHUBUSM&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_25&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFYWNYRAZK2ZAG.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.3
+- img
+- text: (10,883)
+- img
+- link "₹480 ₹599 19% off":
+  - /url: /park-avenue-euphoria-eau-de-parfum-100-ml/p/itm8e246a197d073?pid=PERFYWNYRAZK2ZAG&lid=LSTPERFYWNYRAZK2ZAGHUBUSM&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_25&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERFYWNYRAZK2ZAG.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "PATEL NECK 50 ML UNISEX APPAREL PERFUME Perfume - 50 ml":
+  - /url: /patel-neck-50-ml-unisex-apparel-perfume/p/itm47950b23b7d9f?pid=PERGFY5AHMD9FZBU&lid=LSTPERGFY5AHMD9FZBUYIWZZN&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_26&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGFY5AHMD9FZBU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "PATEL NECK 50 ML UNISEX APPAREL PERFUME Perfume - 50 ml"
+  - img
+- link "PATEL NECK 50 ML UNISEX APPAREL PERFUME Perfume - 50 ...":
+  - /url: /patel-neck-50-ml-unisex-apparel-perfume/p/itm47950b23b7d9f?pid=PERGFY5AHMD9FZBU&lid=LSTPERGFY5AHMD9FZBUYIWZZN&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_26&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGFY5AHMD9FZBU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.4
+- img
+- text: (5,565)
+- img
+- link "₹450 ₹550 18% off":
+  - /url: /patel-neck-50-ml-unisex-apparel-perfume/p/itm47950b23b7d9f?pid=PERGFY5AHMD9FZBU&lid=LSTPERGFY5AHMD9FZBUYIWZZN&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_26&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGFY5AHMD9FZBU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "BELLAVITA NARCO Perfume & DEVIL Perfume combo|2X20ML|With Citrusy & Woody Notes| Eau de Parfum - 40 ml":
+  - /url: /bellavita-narco-perfume-devil-combo-2x20ml-with-citrusy-woody-notes-eau-de-parfum-40-ml/p/itm2969b821203c1?pid=PERH93J5V8JJZNFC&lid=LSTPERH93J5V8JJZNFCNIGY8B&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_27&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqSANBlBGQAc81gI-KjfQ0c_Su-CxCyhxhJd1qH8rvOpGHMvPFQ37B72PG1ZuLzi1m170rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA NARCO Perfume & DEVIL Perfume combo|2X20ML|With Citrusy & Woody Notes| Eau de Parfum - 40 ml"
+  - img
+- img
+- link "BELLAVITA NARCO Perfume & DEVIL Perfume combo|2X20ML|Wi...":
+  - /url: /bellavita-narco-perfume-devil-combo-2x20ml-with-citrusy-woody-notes-eau-de-parfum-40-ml/p/itm2969b821203c1?pid=PERH93J5V8JJZNFC&lid=LSTPERH93J5V8JJZNFCNIGY8B&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_27&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqSANBlBGQAc81gI-KjfQ0c_Su-CxCyhxhJd1qH8rvOpGHMvPFQ37B72PG1ZuLzi1m170rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.2
+- img
+- text: (2,927)
+- img
+- link "₹199 ₹798 75% off":
+  - /url: /bellavita-narco-perfume-devil-combo-2x20ml-with-citrusy-woody-notes-eau-de-parfum-40-ml/p/itm2969b821203c1?pid=PERH93J5V8JJZNFC&lid=LSTPERH93J5V8JJZNFCNIGY8B&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_27&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqSANBlBGQAc81gI-KjfQ0c_Su-CxCyhxhJd1qH8rvOpGHMvPFQ37B72PG1ZuLzi1m170rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "BRIT ACCENT |Combo Pack|PUNCH+MARVEL|Specially Curated|Premium-Long-Lasting| Eau de Parfum - 55 ml":
+  - /url: /brit-accent-combo-pack-punch-marvel-specially-curated-premium-long-lasting-eau-de-parfum-55-ml/p/itm5bd32f1a0de60?pid=PERHPYGFEKSBRMBE&lid=LSTPERHPYGFEKSBRMBE3S34KI&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_28&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqRae-sIbI9-y_r1bSFtzxx7l-Aurps3McpTXqmy7EHEmuoIqLKsIvcEgHw6Iu--8yRwfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BRIT ACCENT |Combo Pack|PUNCH+MARVEL|Specially Curated|Premium-Long-Lasting| Eau de Parfum - 55 ml"
+  - img
+- img
+- link "BRIT ACCENT |Combo Pack|PUNCH+MARVEL|Specially Curated|...":
+  - /url: /brit-accent-combo-pack-punch-marvel-specially-curated-premium-long-lasting-eau-de-parfum-55-ml/p/itm5bd32f1a0de60?pid=PERHPYGFEKSBRMBE&lid=LSTPERHPYGFEKSBRMBE3S34KI&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_28&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqRae-sIbI9-y_r1bSFtzxx7l-Aurps3McpTXqmy7EHEmuoIqLKsIvcEgHw6Iu--8yRwfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women
+- link "₹145 ₹798 81% off":
+  - /url: /brit-accent-combo-pack-punch-marvel-specially-curated-premium-long-lasting-eau-de-parfum-55-ml/p/itm5bd32f1a0de60?pid=PERHPYGFEKSBRMBE&lid=LSTPERHPYGFEKSBRMBE3S34KI&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_28&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqRae-sIbI9-y_r1bSFtzxx7l-Aurps3McpTXqmy7EHEmuoIqLKsIvcEgHw6Iu--8yRwfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "DENVER Hamilton EDP- SRK's Favorite Luxury Gift Pack (20ml x 4) Perfume Eau de Parfum - 80 ml":
+  - /url: /denver-hamilton-edp-srk-s-favorite-luxury-gift-pack-20ml-x-4-perfume-eau-de-parfum-80-ml/p/itm3363524a5d613?pid=PERGT2RWAXHBU6N6&lid=LSTPERGT2RWAXHBU6N62G9KOZ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_29&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGT2RWAXHBU6N6.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "DENVER Hamilton EDP- SRK's Favorite Luxury Gift Pack (20ml x 4) Perfume Eau de Parfum - 80 ml"
+  - img
+- link "DENVER Hamilton EDP- SRK's Favorite Luxury Gift Pack (2...":
+  - /url: /denver-hamilton-edp-srk-s-favorite-luxury-gift-pack-20ml-x-4-perfume-eau-de-parfum-80-ml/p/itm3363524a5d613?pid=PERGT2RWAXHBU6N6&lid=LSTPERGT2RWAXHBU6N62G9KOZ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_29&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGT2RWAXHBU6N6.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.4
+- img
+- text: (1,13,899)
+- img
+- link "₹480 ₹799 39% off":
+  - /url: /denver-hamilton-edp-srk-s-favorite-luxury-gift-pack-20ml-x-4-perfume-eau-de-parfum-80-ml/p/itm3363524a5d613?pid=PERGT2RWAXHBU6N6&lid=LSTPERGT2RWAXHBU6N62G9KOZ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_29&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGT2RWAXHBU6N6.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "THE MAN COMPANY Perfume Gift Set - Timeless Fragrances | Luxury Long-Lasting Perfumes For Men Perfume - 200 ml":
+  - /url: /man-company-perfume-gift-set-timeless-fragrances-luxury-long-lasting-perfumes-men-200-ml/p/itmfdbcd89a96cb5?pid=PERGVYSZHSZFCRGB&lid=LSTPERGVYSZHSZFCRGBP1VSPY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_30&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGVYSZHSZFCRGB.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "THE MAN COMPANY Perfume Gift Set - Timeless Fragrances | Luxury Long-Lasting Perfumes For Men Perfume - 200 ml"
+  - img
+- link "THE MAN COMPANY Perfume Gift Set - Timeless Fragrances ...":
+  - /url: /man-company-perfume-gift-set-timeless-fragrances-luxury-long-lasting-perfumes-men-200-ml/p/itmfdbcd89a96cb5?pid=PERGVYSZHSZFCRGB&lid=LSTPERGVYSZHSZFCRGBP1VSPY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_30&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGVYSZHSZFCRGB.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.2
+- img
+- text: (1,848)
+- img
+- link "₹569 ₹4,295 86% off":
+  - /url: /man-company-perfume-gift-set-timeless-fragrances-luxury-long-lasting-perfumes-men-200-ml/p/itmfdbcd89a96cb5?pid=PERGVYSZHSZFCRGB&lid=LSTPERGVYSZHSZFCRGBP1VSPY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_30&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERGVYSZHSZFCRGB.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Lowest price in the year
+- link "BELLAVITA NARCO Perfume & NIGHT FEVER Perfume combo|2X20ML|With Citrusy & Woody Notes| Eau de Parfum - 40 ml":
+  - /url: /bellavita-narco-perfume-night-fever-combo-2x20ml-with-citrusy-woody-notes-eau-de-parfum-40-ml/p/itme450d021fed32?pid=PERH99Y5JNNBQUG4&lid=LSTPERH99Y5JNNBQUG4NVBMJU&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_31&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqREt2bCZzH4EIT4ZJ0sESksKsBkl8LdbdLMtNQf6SPU-THLKHW3TDbeqkA7ZlUFCSV70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA NARCO Perfume & NIGHT FEVER Perfume combo|2X20ML|With Citrusy & Woody Notes| Eau de Parfum - 40 ml"
+  - img
+- img
+- link "BELLAVITA NARCO Perfume & NIGHT FEVER Perfume combo|2X2...":
+  - /url: /bellavita-narco-perfume-night-fever-combo-2x20ml-with-citrusy-woody-notes-eau-de-parfum-40-ml/p/itme450d021fed32?pid=PERH99Y5JNNBQUG4&lid=LSTPERH99Y5JNNBQUG4NVBMJU&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_31&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqREt2bCZzH4EIT4ZJ0sESksKsBkl8LdbdLMtNQf6SPU-THLKHW3TDbeqkA7ZlUFCSV70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.2
+- img
+- text: (12,349)
+- img
+- link "₹199 ₹798 75% off":
+  - /url: /bellavita-narco-perfume-night-fever-combo-2x20ml-with-citrusy-woody-notes-eau-de-parfum-40-ml/p/itme450d021fed32?pid=PERH99Y5JNNBQUG4&lid=LSTPERH99Y5JNNBQUG4NVBMJU&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_31&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqREt2bCZzH4EIT4ZJ0sESksKsBkl8LdbdLMtNQf6SPU-THLKHW3TDbeqkA7ZlUFCSV70rnus392AI8KOx2MkFyj&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "BRIT ACCENT Combo Pack Of 2|Depth Of Ocean-BLANC OUD|Parfum|Long-Lasting|Specially Currated Eau de Toilette - 100 ml":
+  - /url: /brit-accent-combo-pack-2-depth-ocean-blanc-oud-parfum-long-lasting-specially-currated-eau-de-toilette-100-ml/p/itmff506fdf9f0a7?pid=PERHGVHJYHZPBXNU&lid=LSTPERHGVHJYHZPBXNUWDJBWQ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_32&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqSbQraqRPICFBUvxiBaLI1-3JBSyj2ReQWaLo1uDbmVvTXbkT6SHoPenm3oIkYQev9wfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BRIT ACCENT Combo Pack Of 2|Depth Of Ocean-BLANC OUD|Parfum|Long-Lasting|Specially Currated Eau de Toilette - 100 ml"
+  - img
+- img
+- link "BRIT ACCENT Combo Pack Of 2|Depth Of Ocean-BLANC OUD|Pa...":
+  - /url: /brit-accent-combo-pack-2-depth-ocean-blanc-oud-parfum-long-lasting-specially-currated-eau-de-toilette-100-ml/p/itmff506fdf9f0a7?pid=PERHGVHJYHZPBXNU&lid=LSTPERHGVHJYHZPBXNUWDJBWQ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_32&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqSbQraqRPICFBUvxiBaLI1-3JBSyj2ReQWaLo1uDbmVvTXbkT6SHoPenm3oIkYQev9wfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4
+- img
+- text: (4,933)
+- link "₹202 ₹798 74% off":
+  - /url: /brit-accent-combo-pack-2-depth-ocean-blanc-oud-parfum-long-lasting-specially-currated-eau-de-toilette-100-ml/p/itmff506fdf9f0a7?pid=PERHGVHJYHZPBXNU&lid=LSTPERHGVHJYHZPBXNUWDJBWQ&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_32&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqSbQraqRPICFBUvxiBaLI1-3JBSyj2ReQWaLo1uDbmVvTXbkT6SHoPenm3oIkYQev9wfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "Aqualogica Refresh+ Perfume Body Mist - Salted Caramel Crush | Mouthwatering Gourmand Scent Eau de Parfum - 150 ml":
+  - /url: /aqualogica-refresh-perfume-body-mist-salted-caramel-crush-mouthwatering-gourmand-scent-eau-de-parfum-150-ml/p/itm3c45d24f5bd91?pid=PERHMN7GUVDRHFG8&lid=LSTPERHMN7GUVDRHFG8SL6H8L&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_33&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHMN7GUVDRHFG8.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "Aqualogica Refresh+ Perfume Body Mist - Salted Caramel Crush | Mouthwatering Gourmand Scent Eau de Parfum - 150 ml"
+  - img
+- link "Aqualogica Refresh+ Perfume Body Mist - Salted Caramel ...":
+  - /url: /aqualogica-refresh-perfume-body-mist-salted-caramel-crush-mouthwatering-gourmand-scent-eau-de-parfum-150-ml/p/itm3c45d24f5bd91?pid=PERHMN7GUVDRHFG8&lid=LSTPERHMN7GUVDRHFG8SL6H8L&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_33&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHMN7GUVDRHFG8.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.3
+- img
+- text: (61)
+- link "₹431 ₹499 13% off":
+  - /url: /aqualogica-refresh-perfume-body-mist-salted-caramel-crush-mouthwatering-gourmand-scent-eau-de-parfum-150-ml/p/itm3c45d24f5bd91?pid=PERHMN7GUVDRHFG8&lid=LSTPERHMN7GUVDRHFG8SL6H8L&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_33&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHMN7GUVDRHFG8.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "BLA BLI BLU The Game Changer Men Perfume Trial Set|6x7ml|Woody & Musky Notes|Long Lasting| Perfume - 42 ml":
+  - /url: /bla-bli-blu-game-changer-men-perfume-trial-set-6x7ml-woody-musky-notes-long-lasting-42-ml/p/itm72b33e7c07f9a?pid=PERHE5NYJWFGMPFU&lid=LSTPERHE5NYJWFGMPFUO3FFVS&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_34&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHE5NYJWFGMPFU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BLA BLI BLU The Game Changer Men Perfume Trial Set|6x7ml|Woody & Musky Notes|Long Lasting| Perfume - 42 ml"
+  - img
+- link "BLA BLI BLU The Game Changer Men Perfume Trial Set|6x7m...":
+  - /url: /bla-bli-blu-game-changer-men-perfume-trial-set-6x7ml-woody-musky-notes-long-lasting-42-ml/p/itm72b33e7c07f9a?pid=PERHE5NYJWFGMPFU&lid=LSTPERHE5NYJWFGMPFUO3FFVS&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_34&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHE5NYJWFGMPFU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.1
+- img
+- text: (1,251)
+- img
+- link "₹344 ₹399 13% off":
+  - /url: /bla-bli-blu-game-changer-men-perfume-trial-set-6x7ml-woody-musky-notes-long-lasting-42-ml/p/itm72b33e7c07f9a?pid=PERHE5NYJWFGMPFU&lid=LSTPERHE5NYJWFGMPFUO3FFVS&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_34&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHE5NYJWFGMPFU.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "Aurbena Linn Old Money Eau de Parfum – Long Lasting Perfume for Man 50ml0.18 Eau de Parfum - 50 ml":
+  - /url: /aurbena-linn-old-money-eau-de-parfum-long-lasting-perfume-man-50ml0-18-50-ml/p/itm92ead175dbbe5?pid=PERHZY3SY7AK8FZG&lid=LSTPERHZY3SY7AK8FZGQD2VSR&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_35&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHZY3SY7AK8FZG.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "Aurbena Linn Old Money Eau de Parfum – Long Lasting Perfume for Man 50ml0.18 Eau de Parfum - 50 ml"
+  - img
+- link "Aurbena Linn Old Money Eau de Parfum – Long Lasting Per...":
+  - /url: /aurbena-linn-old-money-eau-de-parfum-long-lasting-perfume-man-50ml0-18-50-ml/p/itm92ead175dbbe5?pid=PERHZY3SY7AK8FZG&lid=LSTPERHZY3SY7AK8FZGQD2VSR&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_35&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHZY3SY7AK8FZG.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women
+- img
+- link "₹176 ₹999 82% off":
+  - /url: /aurbena-linn-old-money-eau-de-parfum-long-lasting-perfume-man-50ml0-18-50-ml/p/itm92ead175dbbe5?pid=PERHZY3SY7AK8FZG&lid=LSTPERHZY3SY7AK8FZGQD2VSR&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_35&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHZY3SY7AK8FZG.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "Charlene Spray Mist Intimate Gold 6pcs (30ml each) Perfume - 180 ml":
+  - /url: /charlene-spray-mist-intimate-gold-6pcs-30ml-each-perfume-180-ml/p/itmf544ff0a1de21?pid=DEOG8M5QAGVK8ZH9&lid=LSTDEOG8M5QAGVK8ZH9VSJYQ0&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_36&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.DEOG8M5QAGVK8ZH9.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "Charlene Spray Mist Intimate Gold 6pcs (30ml each) Perfume - 180 ml"
+  - img
+- link "Charlene Spray Mist Intimate Gold 6pcs (30ml each) Perf...":
+  - /url: /charlene-spray-mist-intimate-gold-6pcs-30ml-each-perfume-180-ml/p/itmf544ff0a1de21?pid=DEOG8M5QAGVK8ZH9&lid=LSTDEOG8M5QAGVK8ZH9VSJYQ0&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_36&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.DEOG8M5QAGVK8ZH9.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.4
+- img
+- text: (3,211)
+- img
+- link "₹450 ₹1,194 62% off":
+  - /url: /charlene-spray-mist-intimate-gold-6pcs-30ml-each-perfume-180-ml/p/itmf544ff0a1de21?pid=DEOG8M5QAGVK8ZH9&lid=LSTDEOG8M5QAGVK8ZH9VSJYQ0&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_36&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.DEOG8M5QAGVK8ZH9.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "LOZZBY OLD MONEY Cinnamon Nutmeg Luxury With Benzoin Mist 0.5 Eau de Parfum - 50 ml":
+  - /url: /lozzby-old-money-cinnamon-nutmeg-luxury-benzoin-mist-0-5-eau-de-parfum-50-ml/p/itm389d68eff370e?pid=PERHNYUVFYMK8BXN&lid=LSTPERHNYUVFYMK8BXNA8PZGL&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_37&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqTlCl9GI-vyJ_fySZ6PczZEkYGq1914AdiS54tYHQzJLA5WAWuUzpOywloybGKr_H2PUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "LOZZBY OLD MONEY Cinnamon Nutmeg Luxury With Benzoin Mist 0.5 Eau de Parfum - 50 ml"
+  - img
+- img
+- link "LOZZBY OLD MONEY Cinnamon Nutmeg Luxury With Benzoin Mi...":
+  - /url: /lozzby-old-money-cinnamon-nutmeg-luxury-benzoin-mist-0-5-eau-de-parfum-50-ml/p/itm389d68eff370e?pid=PERHNYUVFYMK8BXN&lid=LSTPERHNYUVFYMK8BXNA8PZGL&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_37&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqTlCl9GI-vyJ_fySZ6PczZEkYGq1914AdiS54tYHQzJLA5WAWuUzpOywloybGKr_H2PUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men & Women 4.6
+- img
+- text: (15)
+- img
+- link "₹174 ₹999 82% off":
+  - /url: /lozzby-old-money-cinnamon-nutmeg-luxury-benzoin-mist-0-5-eau-de-parfum-50-ml/p/itm389d68eff370e?pid=PERHNYUVFYMK8BXN&lid=LSTPERHNYUVFYMK8BXNA8PZGL&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_37&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqTlCl9GI-vyJ_fySZ6PczZEkYGq1914AdiS54tYHQzJLA5WAWuUzpOywloybGKr_H2PUB71EKlSH5eUBYZTzJ8U&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Lowest price since launch
+- link "BRIT ACCENT | Perfume Gift Pack for Men | 5 x 8ml | Premium Fragrances | Eau de Toilette - 40 ml":
+  - /url: /brit-accent-perfume-gift-pack-men-5-x-8ml-premium-fragrances-eau-de-toilette-40-ml/p/itm6da53d8c8d48c?pid=PERHDZCGMUQEHZZY&lid=LSTPERHDZCGMUQEHZZY5OZCUC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_38&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqTUlW5lcrMjBu2Itdg1dLNaXD-DNQ8NT2cNel6KlT8hW7Il19cx12JjAUOLu_KEVDhwfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BRIT ACCENT | Perfume Gift Pack for Men | 5 x 8ml | Premium Fragrances | Eau de Toilette - 40 ml"
+  - img
+- img
+- link "BRIT ACCENT | Perfume Gift Pack for Men | 5 x 8ml | Pre...":
+  - /url: /brit-accent-perfume-gift-pack-men-5-x-8ml-premium-fragrances-eau-de-toilette-40-ml/p/itm6da53d8c8d48c?pid=PERHDZCGMUQEHZZY&lid=LSTPERHDZCGMUQEHZZY5OZCUC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_38&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqTUlW5lcrMjBu2Itdg1dLNaXD-DNQ8NT2cNel6KlT8hW7Il19cx12JjAUOLu_KEVDhwfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 3.9
+- img
+- text: (14,359)
+- link "₹174 ₹349 50% off":
+  - /url: /brit-accent-perfume-gift-pack-men-5-x-8ml-premium-fragrances-eau-de-toilette-40-ml/p/itm6da53d8c8d48c?pid=PERHDZCGMUQEHZZY&lid=LSTPERHDZCGMUQEHZZY5OZCUC&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_38&otracker=search&otracker1=search&fm=organic&iid=en_EYhA2-Pere-QTdyJvhv4wBK_DUlH5VTDyv5bJnNBLqTUlW5lcrMjBu2Itdg1dLNaXD-DNQ8NT2cNel6KlT8hW7Il19cx12JjAUOLu_KEVDhwfZf63n5LI8OpSayQq_O-&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- link "SKINN by TITAN Raw Eau de Parfum - 50 ml":
+  - /url: /skinn-titan-raw-eau-de-parfum-50-ml/p/itmf3wj33fmqrq26?pid=PERDRHBZVHGFYDQD&lid=LSTPERDRHBZVHGFYDQDT7FYRM&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_39&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERDRHBZVHGFYDQD.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "SKINN by TITAN Raw Eau de Parfum - 50 ml"
+  - img
+- link "SKINN by TITAN Raw Eau de Parfum - 50 ml":
+  - /url: /skinn-titan-raw-eau-de-parfum-50-ml/p/itmf3wj33fmqrq26?pid=PERDRHBZVHGFYDQD&lid=LSTPERDRHBZVHGFYDQDT7FYRM&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_39&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERDRHBZVHGFYDQD.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.4
+- img
+- text: (3,439)
+- img
+- link "₹1,717 ₹1,995 13% off":
+  - /url: /skinn-titan-raw-eau-de-parfum-50-ml/p/itmf3wj33fmqrq26?pid=PERDRHBZVHGFYDQD&lid=LSTPERDRHBZVHGFYDQDT7FYRM&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_39&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERDRHBZVHGFYDQD.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "BELLAVITA CEO MAN Eau De Perfume ,Long Lasting Notes of Tonka,Agarwood & Ambergris Eau de Parfum - 50 ml":
+  - /url: /bellavita-ceo-man-eau-de-perfume-long-lasting-notes-tonka-agarwood-ambergris-parfum-50-ml/p/itmc1ee81d91c449?pid=PERHJZZS6NFHYTZJ&lid=LSTPERHJZZS6NFHYTZJONSKAY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_40&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHJZZS6NFHYTZJ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+  - img "BELLAVITA CEO MAN Eau De Perfume ,Long Lasting Notes of Tonka,Agarwood & Ambergris Eau de Parfum - 50 ml"
+  - img
+- link "BELLAVITA CEO MAN Eau De Perfume ,Long Lasting Notes of...":
+  - /url: /bellavita-ceo-man-eau-de-perfume-long-lasting-notes-tonka-agarwood-ambergris-parfum-50-ml/p/itmc1ee81d91c449?pid=PERHJZZS6NFHYTZJ&lid=LSTPERHJZZS6NFHYTZJONSKAY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_40&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHJZZS6NFHYTZJ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: For Men 4.2
+- img
+- text: (1,539)
+- img
+- link "₹299 ₹325 8% off":
+  - /url: /bellavita-ceo-man-eau-de-perfume-long-lasting-notes-tonka-agarwood-ambergris-parfum-50-ml/p/itmc1ee81d91c449?pid=PERHJZZS6NFHYTZJ&lid=LSTPERHJZZS6NFHYTZJONSKAY&marketplace=FLIPKART&q=perfume+for+men&store=g9b%2F0yh%2Fjhz&srno=s_1_40&otracker=search&otracker1=search&fm=organic&iid=435ba512-158f-4a57-acbb-fc78cc6825ca.PERHJZZS6NFHYTZJ.SEARCH&ppt=None&ppn=None&ssid=l154eqvun40000001785465811469&qH=f90b7eda27b1821a&ov_redirect=true&ov_redirect=true
+- text: Only few left Page 1 of 404
+- navigation:
+  - link "1":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=1
+  - link "2":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+  - link "3":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=3
+  - link "4":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=4
+  - link "5":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=5
+  - link "6":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=6
+  - link "7":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=7
+  - link "8":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=8
+  - link "9":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=9
+  - link "10":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=10
+  - link "Next":
+    - /url: /search?q=perfume+for+men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+- text: Did you find what you were looking for? Yes No Reviews for Popular Perfume
+- img "BELLAVITA CEO MAN Eau De Perfume ,Long Lasting Notes of Tonka,Agarwood & Ambergris Eau de Parfum - 50 ml"
+- link "1. BELLAVITA CEO MAN Eau De Pe... 4.2 1,539 Ratings&127 Reviews ₹299 8% off":
+  - /url: /bellavita-ceo-man-eau-de-perfume-long-lasting-notes-tonka-agarwood-ambergris-parfum-50-ml/p/itmc1ee81d91c449?pid=PERHJZZS6NFHYTZJ&marketplace=FLIPKART&ov_redirect=true
+  - text: 1. BELLAVITA CEO MAN Eau De Pe... 4.2
+  - img
+  - text: 1,539 Ratings&127 Reviews ₹299 8% off
+- list:
+  - listitem: "Quantity: 50 ml"
+  - listitem: "Ideal For: Men"
+  - listitem: "Fragrance Classification: Eau de Parfum"
+- text: Most Helpful Review 5
+- img
+- paragraph: Brilliant
+- text: Longlasting, luxury under budget.
+- paragraph: Pooja Parekh
+- img
+- paragraph: Certified Buyer
+- paragraph: 4 months ago
+- text: Recent Review 5
+- img
+- paragraph: Wonderful
+- text: Value for money 8,10 hours fragrance of this perfume ❤️ Love it ✨
+- paragraph: Mayank Singh
+- img
+- paragraph: Certified Buyer
+- paragraph: 15 days ago
+- img "Embarouge 22 North Long Lasting Middle Eastern Luxury|Amberwood and Oud Notes Eau de Parfum - 100 ml"
+- link "2. Embarouge 22 North Long Las... 4.4 80 Ratings&6 Reviews ₹1,999 4% off":
+  - /url: /embarouge-22-north-long-lasting-middle-eastern-luxury-amberwood-oud-notes-eau-de-parfum-100-ml/p/itm572d59f7e07e0?pid=PERHG953JNTMYKD7&marketplace=FLIPKART&ov_redirect=true
+  - text: 2. Embarouge 22 North Long Las... 4.4
+  - img
+  - text: 80 Ratings&6 Reviews ₹1,999 4% off
+- list:
+  - listitem: "Quantity: 100 ml"
+  - listitem: "Ideal For: Men"
+  - listitem: "Fragrance Classification: Eau de Parfum"
+- text: Most Helpful Review 5
+- img
+- paragraph: Highly recommended
+- text: this perfume has a really long-lasting fragrance. packaging and bottle looks so premium. this is a perfect scent to wear in night parties. totally value of t... Read full review
+- paragraph: Pragya Goel
+- img
+- paragraph: Certified Buyer
+- paragraph: 7 months ago
+- text: Recent Review 4
+- img
+- paragraph: Value-for-money
+- text: Best for outing Not for daily use.
+- paragraph: Anup Tamang
+- img
+- paragraph: Certified Buyer
+- paragraph: 3 days ago
+- img "THE MAN COMPANY Black perfume Eau de Toilette - 50 ml"
+- link "3. THE MAN COMPANY Black perfu... 3.9 1,16,011 Ratings&8,087 Reviews ₹349 73% off":
+  - /url: /man-company-black-perfume-eau-de-toilette-50-ml/p/itm362a7d107d090?pid=PERFTY36CEY3UQY2&marketplace=FLIPKART&ov_redirect=true
+  - text: 3. THE MAN COMPANY Black perfu... 3.9
+  - img
+  - text: 1,16,011 Ratings&8,087 Reviews ₹349 73% off
+- list:
+  - listitem: "Quantity: 50 ml"
+  - listitem: "Ideal For: Men"
+  - listitem: "Fragrance Classification: Eau de Toilette"
+- text: Most Helpful Review 3
+- img
+- paragraph: Nice
+- text: Many YouTubers and Flipkart reviews have created hype of this product it smells average duration 1 to 2 hrs you may go with it but I won't recommend you to b... Read full review
+- paragraph: harsh saxena
+- img
+- paragraph: Certified Buyer
+- paragraph: Sep, 2023
+- text: Recent Review 4
+- img
+- paragraph: Really Nice
+- text: Fragrance up to 30 minutes
+- paragraph: Khan Baba
+- img
+- paragraph: Certified Buyer
+- paragraph: 1 day ago
+- img "BRIT ACCENT | Perfume Gift Pack for Men | 5 x 8ml | Premium Fragrances | Eau de Toilette - 40 ml"
+- link "4. BRIT ACCENT | Perfume Gift ... 3.9 14,359 Ratings&1,079 Reviews ₹174 50% off":
+  - /url: /brit-accent-perfume-gift-pack-men-5-x-8ml-premium-fragrances-eau-de-toilette-40-ml/p/itm6da53d8c8d48c?pid=PERHDZCGMUQEHZZY&marketplace=FLIPKART&ov_redirect=true
+  - text: 4. BRIT ACCENT | Perfume Gift ... 3.9
+  - img
+  - text: 14,359 Ratings&1,079 Reviews ₹174 50% off
+- list:
+  - listitem: "Quantity: 40 ml"
+  - listitem: "Ideal For: Men"
+  - listitem: "Fragrance Classification: Eau de Toilette"
+- text: Most Helpful Review 5
+- img
+- paragraph: Just wow!
+- text: Fantastic fragrance collection. Brit Accent gift pack offers great variety and value. Premium scents are rich and long lasting. Ideal for gifting or personal... Read full review
+- paragraph: Hariom Kumar
+- img
+- paragraph: Certified Buyer
+- paragraph: 11 months ago
+- text: Recent Review 5
+- img
+- paragraph: Perfect product!
+- text: Smells like heaven...😶‍🌫️👍
+- paragraph: Zakia Shamshad
+- img
+- paragraph: Certified Buyer
+- paragraph: 14 days ago
+- img "THE MAN COMPANY Blanc EDT (50ml) & Black EDT (50ml) Long Lasting Perfume Gift Set Eau de Toilette - 100 ml"
+- link "5. THE MAN COMPANY Blanc EDT (... 4 4,663 Ratings&449 Reviews ₹368 83% off":
+  - /url: /man-company-blanc-edt-50ml-black-long-lasting-perfume-gift-set-eau-de-toilette-100-ml/p/itm4b2e5a1f1de82?pid=PERGEHRUHXRFPGCP&marketplace=FLIPKART&ov_redirect=true
+  - text: 5. THE MAN COMPANY Blanc EDT (... 4
+  - img
+  - text: 4,663 Ratings&449 Reviews ₹368 83% off
+- list:
+  - listitem: "Quantity: 100 ml"
+  - listitem: "Ideal For: Men"
+  - listitem: "Fragrance Classification: Eau de Toilette"
+- text: Most Helpful Review 5
+- img
+- paragraph: Just wow!
+- text: Really nice product the fragrance was really good amazing 👏 👍 👌
+- paragraph: Flipkart Customer
+- img
+- paragraph: Certified Buyer
+- paragraph: Jun, 2022
+- text: Recent Review 2
+- img
+- paragraph: Moderate
+- text: Product is verry bad not long lasting
+- paragraph: saurav jha
+- img
+- paragraph: Certified Buyer
+- paragraph: 4 days ago
+- contentinfo:
+  - text: ABOUT
+  - link "Contact Us":
+    - /url: /helpcentre?otracker=footer_navlinks
+  - link "About Us":
+    - /url: https://corporate.flipkart.net/corporate-home
+  - link "Careers":
+    - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+  - link "Flipkart Stories":
+    - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+  - link "Press":
+    - /url: http://stories.flipkart.com/category/top-stories/news/
+  - link "Corporate Information":
+    - /url: /corporate-information
+  - text: GROUP COMPANIES
+  - link "Myntra":
+    - /url: https://www.myntra.com/
+  - link "Cleartrip":
+    - /url: https://www.cleartrip.com/
+  - link "Shopsy":
+    - /url: https://www.shopsy.in/
+  - text: HELP
+  - link "Payments":
+    - /url: /pages/payments
+  - link "Shipping":
+    - /url: /pages/shipping
+  - link "Cancellation & Returns":
+    - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+  - link "FAQ":
+    - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+  - text: CONSUMER POLICY
+  - link "Cancellation & Returns":
+    - /url: /pages/returnpolicy?otracker=footer_navlinks
+  - link "Terms Of Use":
+    - /url: /pages/terms?otracker=footer_navlinks
+  - link "Security":
+    - /url: /pages/paymentsecurity?otracker=footer_navlinks
+  - link "Privacy":
+    - /url: /pages/privacypolicy?otracker=footer_navlinks
+  - link "Sitemap":
+    - /url: /sitemap?otracker=footer_navlinks
+  - link "Grievance Redressal":
+    - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+  - link "EPR Compliance":
+    - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+  - link "FSSAI Food Safety Connect App":
+    - /url: https://fssai.gov.in/cms/food-safety-connect.php
+  - text: "Mail Us:"
+  - paragraph: Flipkart Internet Private Limited,
+  - paragraph: Buildings Alyssa, Begonia &
+  - paragraph: Clove Embassy Tech Village,
+  - paragraph: Outer Ring Road, Devarabeesanahalli Village,
+  - paragraph: Bengaluru, 560103,
+  - paragraph: Karnataka, India
+  - text: Social
+  - link:
+    - /url: https://www.facebook.com/flipkart
+    - img
+  - link:
+    - /url: https://www.twitter.com/flipkart
+    - img
+  - link:
+    - /url: https://www.youtube.com/flipkart
+    - img
+  - link:
+    - /url: https://www.instagram.com/flipkart
+    - img
+  - text: "Registered Office Address:"
+  - paragraph: Flipkart Internet Private Limited,
+  - paragraph: Buildings Alyssa, Begonia &
+  - paragraph: Clove Embassy Tech Village,
+  - paragraph: Outer Ring Road, Devarabeesanahalli Village,
+  - paragraph: Bengaluru, 560103,
+  - paragraph: Karnataka, India
+  - paragraph: "CIN : U51109KA2012PTC066107"
+  - paragraph:
+    - text: "Telephone:"
+    - link "044-45614700":
+      - /url: tel:044-45614700
+    - text: /
+    - link "044-67415800":
+      - /url: tel:044-67415800
+  - img
+  - link "Become a Seller":
+    - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+  - img
+  - text: Advertise
+  - img
+  - link "Gift Cards":
+    - /url: /the-gift-card-store?otracker=footer_navlinks
+  - img
+  - link "Help Center":
+    - /url: /helpcentre?otracker=footer_navlinks
+  - text: © 2007-2026 Flipkart.com
+  - img
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect, type Page } from '@playwright/test';
+  2  | 
+  3  | async function openFlipkartAndSearch(page: Page, searchText: string) {
+  4  |   await page.goto('https://www.flipkart.com/', { waitUntil: 'domcontentloaded' });
+  5  | 
+  6  |   const closePopupButton = page.getByRole('button', { name: /close|✕/ }).first();
+  7  |   if (await closePopupButton.isVisible().catch(() => false)) {
+  8  |     await closePopupButton.click();
+  9  |   }
+  10 | 
+  11 |   const searchInput = page.getByRole('textbox', { name: /Search for Products, Brands/i }).first();
+  12 |   await searchInput.waitFor({ state: 'visible', timeout: 10000 });
+  13 |   await searchInput.fill(searchText);
+  14 |   await page.locator('button[type="submit"]').first().click();
+  15 | 
+  16 |   await page.waitForLoadState('networkidle');
+  17 | }
+  18 | 
+  19 | test('TC1 - Search for perfume for men on Flipkart', async ({ page }) => {
+  20 |   // Explanation: This test opens the Flipkart website, finds the search box, enters the text "perfume for men", and submits the search.
+  21 |   await openFlipkartAndSearch(page, 'perfume for men');
+  22 | 
+  23 |   await expect(page).toHaveURL(/search/);
+  24 | });
+  25 | 
+  26 | test('TC2 - Verify the search term appears on the results page', async ({ page }) => {
+  27 |   // Explanation: This test confirms that the search query was accepted and the results page loads with the same search text.
+  28 |   await openFlipkartAndSearch(page, 'perfume for men');
+  29 | 
+  30 |   const searchInput = page.locator('input[title="Search for Products, Brands and More"]');
+> 31 |   await expect(searchInput).toHaveValue('perfume for men');
+     |                             ^ Error: expect(locator).toHaveValue(expected) failed
+  32 |   await expect(page).toHaveURL(/search/);
+  33 | });
+  34 | 
+  35 | 
+  36 | 
+```
