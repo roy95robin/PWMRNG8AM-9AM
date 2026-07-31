@@ -28,3 +28,8 @@ test('view the product', async()=>{
     await expect(dp.viewPageProductName).toHaveText(productName)
     
 })
+/*
+Make the changes to appear in git 
+this is new line
+
+*/
