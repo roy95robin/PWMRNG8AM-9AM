@@ -1,0 +1,31 @@
+APIResponse: 200 OK
+  Date: Mon, 03 Aug 2026 03:14:44 GMT
+  Server: Apache/2.4.52 (Ubuntu)
+  Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+  X-DNS-Prefetch-Control: off
+  Expect-CT: max-age=0
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=15552000; includeSubDomains
+  X-Download-Options: noopen
+  X-Content-Type-Options: nosniff
+  X-Permitted-Cross-Domain-Policies: none
+  Referrer-Policy: no-referrer
+  X-XSS-Protection: 0
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json; charset=utf-8
+  Content-Length: 356
+  ETag: W/"164-qPlQGjLBLZ6qQzIeLe8CeK7DDD8"
+  Vary: Accept-Encoding
+  Keep-Alive: timeout=5, max=100
+  Connection: Keep-Alive
+{
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ0Njc1NWFlMmFmZDRjMGI2Mjg2YmMiLCJ1c2VyRW1haWwiOiJ0ZXN0bkhOa0BnbWFpbC5jb20iLCJ1c2VyTW9iaWxlIjoxMjM0NTY3ODkwLCJ1c2VyUm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzg1NzI2ODg0LCJleHAiOjE4MTcyODQ0ODR9.UeUf5Smc6MS3Chg3QgIvQvElUqILab15HG2Bm6heAPw',
+  userId: '66d46755ae2afd4c0b6286bc',
+  message: 'Login Successfully'
+}
+Auth token is : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ0Njc1NWFlMmFmZDRjMGI2Mjg2YmMiLCJ1c2VyRW1haWwiOiJ0ZXN0bkhOa0BnbWFpbC5jb20iLCJ1c2VyTW9iaWxlIjoxMjM0NTY3ODkwLCJ1c2VyUm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzg1NzI2ODg0LCJleHAiOjE4MTcyODQ0ODR9.UeUf5Smc6MS3Chg3QgIvQvElUqILab15HG2Bm6heAPw
+response is: {
+  orders: [ '6a7007a485b8849b49264890' ],
+  productOrderId: [ '6960ea76c941646b7a8b3dd5' ],
+  message: 'Order Placed Successfully'
+}
