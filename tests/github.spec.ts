@@ -38,7 +38,17 @@ after the download is done, check the version inside command prompt
 8. git commit -m "new changes"
 9. git push -- you will see the error along with suggested command , copy that command 
 10 git push --set-upstream origin BranchName
+11. git add . 
+12. git commit -m "new changes"
+13. git push --
 
+
+// Create a pull request now: 
+14. goto repository in github/gitlab and refresh the page
+15. click on pull request and open the pull request
+16. Provide the title and description 
+17. Assign the reviewer and get it reviewed
+18. After reviewer feedback merge the code if you've an options. 
 
 
 
